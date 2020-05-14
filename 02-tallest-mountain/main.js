@@ -9,3 +9,14 @@
 */
 
 // YOUR CODE HERE
+let fin = document.querySelector('#tallest-mountain');
+let mountains = [29029, 28251, 28169, 27940, 27838, 26906]
+let i = 0
+let tallest = 0
+while (i < mountains.length){
+   if (mountains[tallest] < mountains[i]){
+      tallest = i
+   }
+   i++
+}
+fin.innerText = "The tallest mountain in the array is " + mountains[tallest] + " feet tall!" 

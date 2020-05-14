@@ -20,3 +20,26 @@
 */
 
 // YOUR CODE HERE
+
+let word = "supercalifragilisticexpialidocious"
+let searchButton = document.querySelector('#search-button');
+let results = document.querySelector('#search-results');
+let wordSplit = word.split("")
+
+searchButton.addEventListener('click', function () {
+   let pos = 0
+   let count = 0
+   let letter = document.querySelector('#textbox').value;
+   while (pos < word.length){
+      if (wordSplit[pos] === letter){
+         count++
+      }
+      pos++
+      
+   }
+   if (count > 0){
+      results.innerText = count + " instances of the letter " + letter + " found in my word."
+   } else {
+      results.innerText = "Sorry, my word does not include the letter " + letter + "."
+   }
+})
